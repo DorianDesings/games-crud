@@ -1,5 +1,17 @@
+import { useState } from 'react';
+import Header from './components/header/Header';
+import Main from './components/main/Main';
+import { GlobalStyles } from './styles/GlobalStyles';
+
 const App = () => {
-	return <h1>Nucleo de la aplicación</h1>;
+	const [users, setUsers] = useState([]);
+	return (
+		<>
+			<GlobalStyles />
+			<Header />
+			<Main users={users} setUsers={setUsers} />
+		</>
+	);
 };
 
 export default App;
